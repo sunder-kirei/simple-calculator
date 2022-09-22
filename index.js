@@ -76,9 +76,10 @@ function evaluate() {
         string = string.slice(0, i) + "," + string.slice(i, string.length);
       }
     }
-    string = Number(string).toFixed(2);
+    string = Math.round(Number(string) * 100) / 100;
     isVisible = true;
     answer.textContent = string;
+    answer.scrollLeft = 0;
   } catch (error) {
     answer.textContent = "ERROR";
   }
