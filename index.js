@@ -34,7 +34,7 @@ function handleClick(e) {
 
 function addClass(e) {
   console.log(e);
-  if ((e.target.id = "del")) {
+  if (e.target.id == "del") {
     e.target.classList.toggle("clicked-reset");
     return;
   }
@@ -43,7 +43,7 @@ function addClass(e) {
 }
 
 function removeClass(e) {
-  if ((e.target.id = "del")) {
+  if (e.target.id == "del") {
     e.target.classList.toggle("clicked-reset");
     return;
   }
