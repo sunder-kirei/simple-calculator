@@ -41,6 +41,10 @@ body main .answer {
   background-color: hsl(224deg, 36%, 15%);
   color: hsl(0deg, 0%, 100%);
   overflow: hidden;
+  overflow-x: auto;
+}
+body main .answer::-webkit-scrollbar {
+  width: 0px;
 }
 body main .calculator {
   margin-top: 1em;

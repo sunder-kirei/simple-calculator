@@ -21,6 +21,17 @@ function handleDelete() {
 
 function handleClick(e) {
   if (answer.textContent == "ERROR" || isVisible == true) {
+    if (
+      (isVisible && e.target.textContent == "+") ||
+      e.target.textContent == "/" ||
+      e.target.textContent == "*" ||
+      e.target.textContent == "-"
+    ) {
+      answer.textContent += e.target.textContent;
+      answer.scrollLeft = answer.scrollWidth;
+      isVisible = false;
+      return;
+    }
     isVisible = false;
     answer.textContent = "0";
   }
@@ -30,10 +41,10 @@ function handleClick(e) {
     return;
   }
   answer.textContent += e.target.textContent;
+  answer.scrollLeft = answer.scrollWidth;
 }
 
 function addClass(e) {
-  console.log(e);
   if (e.target.id == "del") {
     e.target.classList.toggle("clicked-reset");
     return;
@@ -89,11 +100,21 @@ function handleKeyDown(e) {
   if (string == null) return;
 
   if (answer.textContent == "ERROR" || isVisible == true) {
+    if (
+      isVisible &&
+      (e.key == "+" || e.key == "/" || e.key == "*" || e.key == "-")
+    ) {
+      answer.textContent += e.key;
+      answer.scrollLeft = answer.scrollWidth;
+      isVisible = false;
+      return;
+    }
     isVisible = false;
     answer.textContent = "0";
   }
   if (answer.textContent == 0) answer.textContent = "";
   answer.textContent += e.key;
+  answer.scrollLeft = answer.scrollWidth;
 }
 
 document.addEventListener("keydown", handleKeyDown);

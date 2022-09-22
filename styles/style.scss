@@ -39,6 +39,10 @@ body {
       background-color: $color-screen-bg;
       color: $color-white;
       overflow: hidden;
+      overflow-x: auto;
+      &::-webkit-scrollbar {
+        width: 0px;
+      }
     }
     .calculator {
       margin-top: 1em;
