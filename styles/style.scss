@@ -68,6 +68,9 @@ body {
           &:hover {
             background-color: hsl(0, 0%, 92%);
           }
+          &:active {
+            background-color: $color-shadow-orange;
+          }
         }
         #del {
           box-shadow: 0px 0.1em 0px $color-key-shadow;
@@ -75,6 +78,9 @@ body {
           color: $color-white;
           &:hover {
             background-color: hsl(225, 66%, 69%);
+          }
+          &:active {
+            background-color: $color-key-shadow;
           }
         }
       }
@@ -98,6 +104,9 @@ body {
           &:hover {
             background-color: hsl(6, 99%, 63%);
           }
+          &:active {
+            background-color: $color-shadow-red;
+          }
         }
         #reset {
           background-color: $color-key-bg;
@@ -105,23 +114,15 @@ body {
           &:hover {
             background-color: hsl(225, 66%, 69%);
           }
+          &:active {
+            background-color: $color-key-shadow;
+          }
         }
       }
     }
   }
 }
 
-.clicked-key {
-  background-color: $color-shadow-orange !important;
-}
-
-.clicked-reset {
-  background-color: $color-key-shadow !important;
-}
-
-.clicked-equals {
-  background-color: $color-white !important;
-}
 @media screen and (max-width: 550px) {
   :root {
     font-size: 28px;

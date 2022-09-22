@@ -44,24 +44,6 @@ function handleClick(e) {
   answer.scrollLeft = answer.scrollWidth;
 }
 
-function addClass(e) {
-  if (e.target.id == "del") {
-    e.target.classList.toggle("clicked-reset");
-    return;
-  }
-
-  e.target.classList.toggle("clicked-key");
-}
-
-function removeClass(e) {
-  if (e.target.id == "del") {
-    e.target.classList.toggle("clicked-reset");
-    return;
-  }
-
-  e.target.classList.toggle("clicked-key");
-}
-
 function evaluate() {
   let string = answer.textContent;
   for (let i = 0; i < string.length; i++) {
@@ -121,19 +103,11 @@ function handleKeyDown(e) {
 document.addEventListener("keydown", handleKeyDown);
 
 for (let key of keys) {
-  key.addEventListener("mousedown", addClass);
-  key.addEventListener("mouseup", removeClass);
   key.addEventListener("click", handleClick);
 }
 
 reset.addEventListener("click", (e) => {
   answer.textContent = "0";
-});
-reset.addEventListener("mousedown", (e) => {
-  e.target.classList.toggle("clicked-reset");
-});
-reset.addEventListener("mouseup", (e) => {
-  e.target.classList.toggle("clicked-reset");
 });
 
 equals.addEventListener("click", evaluate);

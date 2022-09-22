@@ -73,6 +73,9 @@ body main .calculator .keys div {
 body main .calculator .keys div:hover {
   background-color: hsl(0deg, 0%, 92%);
 }
+body main .calculator .keys div:active {
+  background-color: hsl(28deg, 16%, 65%);
+}
 body main .calculator .keys #del {
   box-shadow: 0px 0.1em 0px hsl(224deg, 28%, 35%);
   background-color: hsl(225deg, 21%, 49%);
@@ -80,6 +83,9 @@ body main .calculator .keys #del {
 }
 body main .calculator .keys #del:hover {
   background-color: hsl(225deg, 66%, 69%);
+}
+body main .calculator .keys #del:active {
+  background-color: hsl(224deg, 28%, 35%);
 }
 body main .calculator .buttons {
   display: grid;
@@ -103,6 +109,9 @@ body main .calculator .buttons #equals {
 body main .calculator .buttons #equals:hover {
   background-color: hsl(6deg, 99%, 63%);
 }
+body main .calculator .buttons #equals:active {
+  background-color: hsl(6deg, 70%, 34%);
+}
 body main .calculator .buttons #reset {
   background-color: hsl(225deg, 21%, 49%);
   box-shadow: 0px 0.1em 0px hsl(224deg, 28%, 35%);
@@ -110,17 +119,8 @@ body main .calculator .buttons #reset {
 body main .calculator .buttons #reset:hover {
   background-color: hsl(225deg, 66%, 69%);
 }
-
-.clicked-key {
-  background-color: hsl(28deg, 16%, 65%) !important;
-}
-
-.clicked-reset {
-  background-color: hsl(224deg, 28%, 35%) !important;
-}
-
-.clicked-equals {
-  background-color: hsl(0deg, 0%, 100%) !important;
+body main .calculator .buttons #reset:active {
+  background-color: hsl(224deg, 28%, 35%);
 }
 
 @media screen and (max-width: 550px) {
