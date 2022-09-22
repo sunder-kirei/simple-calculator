@@ -79,6 +79,7 @@ function evaluate() {
     string = Number(string).toFixed(2);
     isVisible = true;
     answer.textContent = string;
+    answer.scrollLeft = 0;
   } catch (error) {
     answer.textContent = "ERROR";
   }
