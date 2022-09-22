@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-weight: 700;
+  font-family: "League Spartan", sans-serif;
+}
+
+:root {
+  font-size: 32px;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: hsl(222deg, 26%, 31%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+body main {
+  width: 15.5em;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding-top: 0em;
+}
+body main h1 {
+  color: hsl(0deg, 0%, 100%);
+  font-size: 1em;
+  padding-bottom: 1em;
+}
+body main .answer {
+  height: 2em;
+  border-radius: 0.25em;
+  padding: 0.5em;
+  padding-top: 0.6em;
+  text-align: right;
+  font-size: 2em;
+  background-color: hsl(224deg, 36%, 15%);
+  color: hsl(0deg, 0%, 100%);
+  overflow: hidden;
+}
+body main .calculator {
+  margin-top: 1em;
+  border-radius: 0.5em;
+  padding: 1em;
+  background-color: hsl(223deg, 31%, 20%);
+}
+body main .calculator .keys {
+  display: grid;
+  grid-template-columns: repeat(4, 3em);
+  grid-gap: 0.5em;
+}
+body main .calculator .keys div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3em;
+  background-color: hsl(30deg, 25%, 89%);
+  padding-block: 0.3em;
+  padding-top: 0.5em;
+  border-radius: 0.25em;
+  cursor: pointer;
+  color: hsl(223deg, 31%, 20%);
+  box-shadow: 0px 0.1em 0px hsl(28deg, 16%, 65%);
+}
+body main .calculator .keys div:hover {
+  background-color: hsl(0deg, 0%, 92%);
+}
+body main .calculator .keys #del {
+  box-shadow: 0px 0.1em 0px hsl(224deg, 28%, 35%);
+  background-color: hsl(225deg, 21%, 49%);
+  color: hsl(0deg, 0%, 100%);
+}
+body main .calculator .keys #del:hover {
+  background-color: hsl(225deg, 66%, 69%);
+}
+body main .calculator .buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1em;
+  margin-top: 0.5em;
+}
+body main .calculator .buttons button {
+  font-size: 1em;
+  padding-block: 0.3em;
+  padding-top: 0.5em;
+  border: none;
+  cursor: pointer;
+  border-radius: 0.25em;
+  color: hsl(0deg, 0%, 100%);
+}
+body main .calculator .buttons #equals {
+  background-color: hsl(6deg, 63%, 50%);
+  box-shadow: 0px 0.1em 0px hsl(6deg, 70%, 34%);
+}
+body main .calculator .buttons #equals:hover {
+  background-color: hsl(6deg, 99%, 63%);
+}
+body main .calculator .buttons #reset {
+  background-color: hsl(225deg, 21%, 49%);
+  box-shadow: 0px 0.1em 0px hsl(224deg, 28%, 35%);
+}
+body main .calculator .buttons #reset:hover {
+  background-color: hsl(225deg, 66%, 69%);
+}
+
+.clicked-key {
+  background-color: hsl(28deg, 16%, 65%) !important;
+}
+
+.clicked-reset {
+  background-color: hsl(224deg, 28%, 35%) !important;
+}
+
+.clicked-equals {
+  background-color: hsl(0deg, 0%, 100%) !important;
+}
+
+@media screen and (max-width: 550px) {
+  :root {
+    font-size: 28px;
+  }
+}
+@media screen and (max-width: 500px) {
+  :root {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 450px) {
+  :root {
+    font-size: 22px;
+  }
+}
+@media screen and (max-width: 400px) {
+  :root {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 350px) {
+  :root {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 300px) {
+  :root {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 275px) {
+  :root {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 200px) {
+  :root {
+    font-size: 10px;
+  }
+}/*# sourceMappingURL=style.css.map */

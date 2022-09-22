@@ -1,0 +1,160 @@
+@import "colors.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-weight: 700;
+  font-family: "League Spartan", sans-serif;
+}
+
+:root {
+  font-size: 32px;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: $color-main-bg;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  main {
+    width: 15.5em;
+    height: fit-content;
+    padding-top: 0em;
+    h1 {
+      color: $color-white;
+      font-size: 1em;
+      padding-bottom: 1em;
+    }
+    .answer {
+      height: 2em;
+      border-radius: 0.25em;
+      padding: 0.5em;
+      padding-top: 0.6em;
+      text-align: right;
+      font-size: 2em;
+      background-color: $color-screen-bg;
+      color: $color-white;
+      overflow: hidden;
+    }
+    .calculator {
+      margin-top: 1em;
+      border-radius: 0.5em;
+      padding: 1em;
+      background-color: $color-keypad-bg;
+      .keys {
+        display: grid;
+        grid-template-columns: repeat(4, 3em);
+        grid-gap: 0.5em;
+        div {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 3em;
+          background-color: $color-key-bg-orange;
+          padding-block: 0.3em;
+          padding-top: 0.5em;
+          border-radius: 0.25em;
+          cursor: pointer;
+          color: $color-keypad-bg;
+          box-shadow: 0px 0.1em 0px $color-shadow-orange;
+          &:hover {
+            background-color: hsl(0, 0%, 92%);
+          }
+        }
+        #del {
+          box-shadow: 0px 0.1em 0px $color-key-shadow;
+          background-color: $color-key-bg;
+          color: $color-white;
+          &:hover {
+            background-color: hsl(225, 66%, 69%);
+          }
+        }
+      }
+      .buttons {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1em;
+        margin-top: 0.5em;
+        button {
+          font-size: 1em;
+          padding-block: 0.3em;
+          padding-top: 0.5em;
+          border: none;
+          cursor: pointer;
+          border-radius: 0.25em;
+          color: $color-white;
+        }
+        #equals {
+          background-color: $color-toggle-red;
+          box-shadow: 0px 0.1em 0px $color-shadow-red;
+          &:hover {
+            background-color: hsl(6, 99%, 63%);
+          }
+        }
+        #reset {
+          background-color: $color-key-bg;
+          box-shadow: 0px 0.1em 0px $color-key-shadow;
+          &:hover {
+            background-color: hsl(225, 66%, 69%);
+          }
+        }
+      }
+    }
+  }
+}
+
+.clicked-key {
+  background-color: $color-shadow-orange !important;
+}
+
+.clicked-reset {
+  background-color: $color-key-shadow !important;
+}
+
+.clicked-equals {
+  background-color: $color-white !important;
+}
+@media screen and (max-width: 550px) {
+  :root {
+    font-size: 28px;
+  }
+}
+@media screen and (max-width: 500px) {
+  :root {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 450px) {
+  :root {
+    font-size: 22px;
+  }
+}
+@media screen and (max-width: 400px) {
+  :root {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 350px) {
+  :root {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 300px) {
+  :root {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 275px) {
+  :root {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 200px) {
+  :root {
+    font-size: 10px;
+  }
+}
